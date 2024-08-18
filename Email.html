@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            background-image: url("../img/7\ \(4\).jpg"); 
+            background-size: cover; 
+            background-position: center;  
+            background-repeat: no-repeat; 
+        }
+        div
+        {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            position: relative;
+            top: -10%;
+        }
+        form
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            background-color: rgba(230, 230, 230,0.2);
+            height: 43%;
+            border-radius: 30px;
+            width: 400px;
+        }
+        input,textarea
+        {
+            border: none;
+            width: 250px;
+            height: 30px;
+            margin: 1px;
+            padding: 5px;
+            border-radius: 3px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: black;
+            color: yellowgreen;
+            font-size:15px;
+
+            font-weight: bold;
+        }
+        ::placeholder
+        {
+            text-align: center;
+            font-weight: bold;
+        }
+        button
+        {
+            margin-top: 10px;
+            width: 200px;
+            height: 40px;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            color: aliceblue;
+            background-color: yellowgreen;
+            border: none;
+        }
+        button:hover
+        {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+        }
+        h1
+        {
+            text-align: center;
+            color: white;
+            font-size: 50px;
+            padding: 10px;
+
+            background-color: rgba(0, 0, 0, 0.1);
+            position: relative;
+            top: -3.8%;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+
+    <!-- 
+      web3forms
+    -->
+      <h1>
+        SERVICE
+      </h1>
+   
+    <div>
+        <form action="https://api.web3forms.com/submit" method="POST"> 
+
+
+            <input type="hidden" name="access_key" value="010a092d-6842-42ec-bcab-01e1e9b86110">
+
+            <input type="text" name="name" placeholder="Your Name" required> <br>
+            <input type="email" name="email" placeholder="Your Email" required><br>
+            <textarea name="message" placeholder="Your message" required></textarea> <br>
+            <!-- <input type="file" name="files[]" multiple id="ile"> <br> -->
+            <button type="submit">Submit</button><br>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+
+    <style>
+        body
+        {
+            margin: 0;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: linear-gradient(rgb(11, 121, 255),rgb(214, 214, 228),lightblue
+            );
+        }
+        #calculator
+        {
+            background-color: rgb(32, 82, 232);
+            max-width: 500px;
+            overflow: hidden;
+            padding: 30px;
+            border-radius: 20px;
+        }
+        #keys
+        {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 10px;
+            padding: 10px;
+        }
+        button
+        {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            font-size: 30px;
+            border: none;
+            position: relative;
+        }
+        #display
+        {
+            width: 20em;
+            margin: 10px;
+            padding: 30px;
+            border-radius: 20px 20px 20px 20px;
+            border: none;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <input id="display" type="display" readonly>
+        <div id="keys">
+            <button onclick="fun('+')">+</button>
+            <button onclick="fun('7')">7</button>
+            <button onclick="fun('8')">8</button>
+            <button onclick="fun('9')">9</button>
+            <button onclick="fun('-')">-</button>
+            <button onclick="fun('4')">4</button>
+            <button onclick="fun('5')">5</button>
+            <button onclick="fun('6')">6</button>
+            <button onclick="fun('*')">*</button>
+            <button onclick="fun('1')">1</button>
+            <button onclick="fun('2')">2</button>
+            <button onclick="fun('3')">3</button>
+            <button onclick="fun('/')">/</button>
+            <button onclick="fun('0')">0</button>
+            <button onclick="fun('.')">.</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="cleardisplay()">C</button>
+        </div>
+    </div>
+
+    <script>
+        let temp = document.getElementById("display");
+        function fun(i)
+        {
+            temp.value+=i;
+        }
+        function cleardisplay()
+        {
+            temp.value="";
+        }
+        function calculate()
+        {
+            try
+            {
+                temp.value = eval(temp.value);
+                
+            }
+            catch(error)
+            {
+                temp.value = "ERROR"
+            }
+        }
+    </script>
+</body>
+</html>

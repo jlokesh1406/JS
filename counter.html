@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>----Counter----</title>
+    <style>
+        .cn1
+        {
+            width: 300px;
+            background-color: greenyellow;
+            padding: 50px;
+            margin-top:35vh;
+            border-radius: 10px;
+        }
+        #counterdigitdisplay 
+        {
+            text-align: center;   
+            font-size: 50px;
+            font-weight: bold;
+        }
+        #countercontainer
+        {
+            text-align: center;
+            margin: 10px;
+            padding: 10px;
+        }
+        #counter_decre
+        {
+            padding: 10px;
+            border-radius: 5px 5px 5px 5px;
+            background-color: black;
+            color: greenyellow;
+            font-size: 15px;
+        }
+
+        #counter_decre:hover
+        {
+            color: black;
+            background-color: greenyellow;
+            border: 2px solid;
+        }
+
+        #counter_reset
+        {
+            padding: 10px;
+            border-radius: 5px 5px 5px 5px;
+            background-color: black;
+            color: greenyellow;
+            font-size: 15px;
+        }
+
+        #counter_reset:hover
+        {
+            color: black;
+            background-color: greenyellow;
+            border: 2px solid;
+        }
+
+        #counter_incre
+        {
+            padding: 10px;
+            border-radius: 5px 5px 5px 5px;
+            background-color: black;
+            color: greenyellow;
+            font-size: 15px;
+        }
+
+        #counter_incre:hover
+        {
+            color: black;
+            background-color: greenyellow;
+            border: 2px solid;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        <div class="cn1">
+            <div id="counterdigitdisplay"> 0 </div>
+            <div id="countercontainer">
+                <button id="counter_decre">Decrement</button>
+                <button id="counter_reset">Reset</button>
+                <button id="counter_incre">Increment</button>
+            </div>
+        </div>
+    </center>
+
+    <script>
+        let decre=document.getElementById("counter_decre");
+        let reset=document.getElementById("counter_reset");
+        let incre=document.getElementById("counter_incre");
+        let display=document.getElementById("counterdigitdisplay");
+        let counter=0;
+        decre.onclick = function()
+        {
+            counter++;
+            display.textContent=counter;
+        }
+
+        reset.onclick = function()
+        {
+            counter=0;
+            display.textContent=counter;
+        }
+
+        incre.onclick = function()
+        {
+            counter--;
+            display.textContent=counter;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            margin: 0;
+        }
+        #EL2
+        {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(166, 93, 93);
+            font-size: 7.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+        <!--46.evenListener-->
+        <div id="EL2">
+            😊
+        </div>
+
+        <script>
+            let el_3 = document.getElementById("EL2");
+            document.addEventListener("keydown",i =>
+            {
+                el_3.style.backgroundColor="RED"
+                el_3.textContent="😒"
+            }
+            );
+            document.addEventListener("keyup",i =>
+            {
+                el_3.style.backgroundColor="BLUE"
+                el_3.textContent="😁"
+            }
+            );
+
+            let moveAmout=100;
+            let x=0;
+            let y=0;
+            document.addEventListener("keydown",i=>
+            {
+                if(i.key.startsWith("Arrow"))
+                {
+                   event.preventDefault();
+                    switch(i.key)
+                    {
+                        case "ArrowUp": 
+                             y-=moveAmout;
+                             break;
+                        case "ArrowDown": 
+                             y+=moveAmout;
+                             break;
+                        case "ArrowLeft": 
+                             x-=moveAmout;
+                             break;
+                        case "ArrowRight": 
+                             x+=moveAmout;
+                             break;
+                    }
+                    el_3.style.top =`${y}px`;
+                    el_3.style.left =`${x}px`;
+                }
+            }
+            )
+
+        </script>
+</body>
+</html>

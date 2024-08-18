@@ -1,0 +1,141 @@
+/*counter program*/
+#divdisplay1 {
+  background-color: rgb(0, 0, 0);
+  position: relative;
+  text-align: center;
+}
+#display1 {
+  text-align: center;
+  color: aliceblue;
+}
+#btn1,
+#btn2,
+#btn3 {
+  text-align: center;
+  color: black;
+  background-color: lawngreen;
+}
+
+#random1 {
+  text-align: center;
+}
+
+#divage {
+  text-align: center;
+}
+
+/*T to C*/
+#TC_FORM {
+  background-image: linear-gradient(yellow, rgba(230, 237, 20, 0.771));
+  width: 200px;
+  padding: 50px;
+  text-align: center;
+  height: 200px;
+  margin-left: 40%;
+}
+
+/* dice game */
+#container {
+  text-align: center;
+  background-color: tomato;
+  width: 500px;
+  height: 400px;
+  margin-left: 30%;
+}
+#diecbtn {
+  background-color: rgb(5, 51, 119);
+  padding: 7px;
+  border-radius: 20px;
+  color: aliceblue;
+}
+#diceinput {
+  background-color: rgb(190, 215, 236);
+  padding: 10px;
+  border: 10px wheat;
+  border: 2px solid wheat;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+#diceinput:hover {
+  border-color: rgb(50, 53, 112);
+}
+#diceImgages {
+  position: relative;
+  top: 0;
+  width: 100px;
+  display: inline;
+}
+/* clock */
+#clock-container
+{
+  width: 100%;
+  height: 500px;
+  background-image: url('./img/20220816_164013.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+  position: relative;
+}
+#clock
+{
+  font-size: 80px;
+  color: aliceblue;
+  position: absolute;
+  left: 40%;
+  top: 40%;
+  /* background-color: rgba(163, 179, 191, 0.5); */
+  padding: 30px;
+  backdrop-filter: blur(5px);
+}
+
+
+/*---stopwatch---*/
+#containerstopwatch
+{
+  text-align: center;
+  background-color: black;
+  width: 300px;
+  height: 160px;
+  padding: 10px;
+  margin-left: 28%;
+  border-radius: 10px;
+}
+#display
+{
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  background-color: antiquewhite;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+#startBtn,
+#stopBtn,
+#resetBtn
+{
+  background-color: rgb(255, 0, 0);
+  padding: 20px;
+  border-radius: 50%;
+  font-size:20px;
+  font-weight: bold;
+  color: white;
+  margin: 4px;
+  border: 1px solid rgb(255, 255, 255);
+}
+#startBtn:hover
+{
+  background-color: yellow;
+  color: black;
+}
+#stopBtn:hover
+{
+  background-color: yellow;
+  color: black;
+}
+#resetBtn:hover
+{
+  background-color: yellow;
+  color: black;
+}
+

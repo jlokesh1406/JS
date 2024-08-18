@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        body
+        {
+            margin: 0px;
+        }
+        #clock-container
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(55, 255, 0);
+        }
+        #clock
+        {
+            background-color: black;
+            color: white;
+            width: 400px;
+            height: 400px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 50px;
+            padding: 10px;
+        }
+        #clock:hover
+        {
+            border: 2px solid black;
+            background-color: rgb(55, 255, 0);
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="clock-container">
+        <div id="clock">00:00:00</div>
+    </div>    
+
+    <script>
+        function updateclock()
+        {
+            let now = new Date();
+            let h = now.getHours().toString().padStart(2,0);
+            let m = now.getMinutes().toString().padStart(2,0);
+            let s = now.getSeconds().toString().padStart(2,0);
+            let apm=h>=12?"PM":"AM";
+            h=h%12||12; // 1 to 12
+            let timeString = `${h}:${m}:${s} ${apm}`;
+            document.getElementById("clock").textContent = timeString;
+        }
+        updateclock();
+        setInterval(updateclock,1000);
+    </script>
+</body>
+</html>

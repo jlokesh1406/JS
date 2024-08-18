@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Image Gallery with Search Box</title>
+
+    <style>
+ 
+        .images {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .images .image-box {
+            position: relative;
+            height: 300px;
+            width: 210px;
+            border-radius: 6px;
+            margin: 8px;
+        }
+        .images .image-box img {
+            height: 100%;
+            width: 100%;
+            border-radius: 6px;
+            transition: transform 0.2s linear;
+        }
+        .image-box:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="search-box">
+            <input type="text" placeholder="Search a movie">🔎
+        </div>
+
+        <div class="images">
+            <div class="image-box" data-name="spiderman">
+                <img src="../img/7 (1).jpg" alt="">
+            </div>
+            <div class="image-box" data-name="joker">
+                <img src="../img/7 (1).jpg" alt="">
+            </div>
+            <div class="image-box" data-name="ironman">
+                <img src="../img/7 (1).jpg" alt="">
+            </div>
+            <div class="image-box" data-name="passenger">
+                <img src="../img/7 (1).jpg" alt="">
+            </div>
+            <div class="image-box" data-name="space">
+                <img src="../img/7 (1).jpg" alt="">
+            </div>
+            <div class="image-box" data-name="spiderman">
+                <img src="../img/7 (1).jpg" alt="">
+            </div>
+            <div class="image-box" data-name="universe">
+                <img src="../img/7 (1).jpg" alt="">
+            </div>
+            <div class="image-box" data-name="spiderman">
+                <img src="../img/7 (1).jpg" alt="">
+            </div>
+            <div class="image-box" data-name="holiday">
+                <img src="../img/7 (1).jpg" alt="">
+            </div>
+            <div class="image-box" data-name="ironman">
+                <img src="../img/7 (1).jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const search = document.querySelector(".search-box input");
+        const images = document.querySelectorAll(".image-box");
+
+        search.addEventListener("input", () => {
+            const searchValue = search.value.toLowerCase();
+            images.forEach(image => {
+                const imageName = image.dataset.name.toLowerCase();
+                if (imageName.includes(searchValue)) {
+                    image.style.display = "block";
+                } else {
+                    image.style.display = "none";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

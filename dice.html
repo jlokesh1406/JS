@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DICE ROLL GAME</title>
+    <style>
+        #dice_continer
+        {
+            width: 300px;
+            background-color: greenyellow;
+            padding: 50px;
+            margin-top:35vh;
+            border-radius: 10px;
+        }
+        #inputdices
+        {
+            text-align: center;
+            height: 20px;
+            border-radius: 10px;
+            margin: 10px;
+            background-color: rgb(188, 174, 174);
+            font-size: 15px;
+        }
+        #buttondices
+        {
+            padding: 10px 10px 25px 10px;
+            text-align: center;
+            height: 30px;
+            border-radius: 10px;
+            background-color: black;
+            color: greenyellow;
+        }
+        #diceResult
+        {
+            padding: 10px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <center>
+        <div id="dice_continer">
+            <h2>DICE ROLLER</h2>
+            <input id="inputdices" type="number" value="1" min="1"> <br>
+            <button id="buttondices" onclick="rolldice()">Roll Dice</button>
+            <div id="diceResult"></div>
+            <div id="diceImage"></div>
+        </div>
+    </center>
+
+
+    <script>
+        function rolldice() 
+        {
+            const diceinput = document.getElementById("inputdices").value;
+            const diceResult = document.getElementById("diceResult");
+            const diceImgages = document.getElementById("diceImage");
+            const value = [];
+            const image = [];
+            let total = 0;
+            for (let i = 0; i < diceinput; i++) {
+            // 1 to 6;
+            const temp = Math.floor(Math.random() * 6) + 1;
+            total += temp;
+            value.push(temp);
+            image.push(`<img src="../img/${temp}.png">`);
+            }
+            diceResult.textContent = "dices:" + value.join(",") + "=" + total;
+            diceImgages.innerHTML = image.join(" ");
+        }
+
+    </script>
+    
+
+
+
+
+
+</body>
+</html>

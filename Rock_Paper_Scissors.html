@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+
+    <style>
+        body
+        {
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #choices
+        {
+            background-color: tomato;
+            padding: 50px;
+        }
+        button
+        {
+            padding: 20px;
+            border-radius: 50px;
+            border: none;
+            font-size: 30px;
+            margin: 10px;
+            margin-bottom: 20px;
+
+            background-color: rgb(102, 102, 236);
+        }
+        .content
+        {
+            text-align: center;
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rock Paper Scissors</h1> 
+    <div id="choices">
+        <button onclick="playgame('rock')"> 👊 </button>
+        <button onclick="playgame('paper')"> ✋ </button>
+        <button onclick="playgame('scissor')"> ✌️ </button>
+        <div id="playerDisplay" class="content">Player:</div>
+        <div id="computerDisplay" class="content">Computer:</div>
+        <div id="resultDisplay" class="content">It's A Tie!</div>
+    </div>
+
+    <script>
+        let choices = ['rock','paper','scissor'];
+        let playerdisplay = document.getElementById("playerDisplay");
+        let computerdisplay = document.getElementById("computerDisplay");
+        let resultdisplay = document.getElementById("resultDisplay");
+
+        function playgame(playerrchoice)
+        {
+            let computerchoice = choices[Math.floor(Math.random()*3)];
+            let result="";
+            if(playerrchoice === computerchoice) 
+            {
+                result="IT's TIE!";
+            }
+            else
+            {
+                switch(playerrchoice)
+                {
+                    case"rock":
+                        result = (computerchoice === "scissor")?"YOU WIN":"IT's TIE!";
+                        break; 
+                    case"paper":
+                        result = (computerchoice === "rock")?"YOU WIN":"IT's TIE!";
+                        break;
+                    case"scissor":
+                        result = (computerchoice === "paper")?"YOU WIN":"IT's TIE!";
+                        break;  
+                }
+            }
+            playerdisplay.textContent = `player : ${playerrchoice}`;
+            computerdisplay.textContent = `computer: ${computerchoice}`;
+            resultdisplay.textContent = result;
+        }
+    </script>
+</body>
+</html>

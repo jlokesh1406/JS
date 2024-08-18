@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image slider</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+    }
+
+        .slides
+        {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .slide
+        {
+            width: 300px;
+            height: 150px;
+            display: none;
+        }
+        .di
+        {
+            position: relative;
+            top: 170px;
+            right:40%;
+            display: inline-block;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+        .prev,.next
+        {
+            position: relative;
+            bottom: 110px;
+            padding: 5px;    
+        }
+        .next
+        {
+            left: 87%;
+        }
+    </style>
+</head>
+<body>      
+   
+        <div class="slider">
+            <div class="slides">
+                <img  class="slide" src="../img/7 (1).jpg" alt="">
+                <img  class="slide" src="../img/7 (2).jpg" alt="">
+                <img  class="slide" src="../img/7 (3).jpg" alt="">
+                <img  class="slide" src="../img/7 (4).jpg" alt="">
+                <img  class="slide" src="../img/7 (5).jpg" alt="">
+                <img  class="slide" src="../img/7 (6).jpg" alt="">
+            </div>
+                <button class="prev" onclick="prevslide()">&#10094</button>
+                <button class="next" onclick="nextslide()">&#10095</button>
+        </div>
+
+
+    <script>
+    let currentIndex = 0;
+
+    function showSlide(index) 
+    {
+        const slides = document.getElementsByClassName('slide');
+        if (index >= slides.length) {
+            currentIndex = 0;
+        } else if (index < 0) {
+            currentIndex = slides.length - 1;
+        } else {
+            currentIndex = index;
+        }
+
+        for (let slide of slides) {
+            slide.style.display = 'none';
+        }
+        slides[currentIndex].style.display = 'block';
+    }
+
+    function nextslide() {
+        showSlide(currentIndex + 1);
+    }
+
+    function prevslide() {
+        showSlide(currentIndex - 1);
+    }
+
+    // Initialize the slider
+    showSlide(currentIndex);
+
+    </script>
+</body>
+</html>

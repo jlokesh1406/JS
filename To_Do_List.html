@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            height: 100vh;
+            background-image: linear-gradient(rgb(132, 255, 0), rgb(102, 232, 102), rgb(155, 232, 140));
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            width: 400px;
+            height: auto;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+        .newtask input {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .newtask button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .newtask button:hover {
+            background-color: #45a049;
+        }
+        .task-list {
+            width: 100%;
+        }
+        .task-item {
+            background-color: aliceblue;
+        
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        .task-item button {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        input:focus {
+            outline: none;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="newtask">
+           <input type="text" placeholder="Enter Story" required>
+           <button id="push">Add</button>
+        </div>
+        <div class="task-list"></div>
+    </div>
+
+    <script>
+        document.getElementById("push").addEventListener("click", function() {
+            const input = document.querySelector(".newtask input");
+            const taskList = document.querySelector(".task-list");
+
+            if (input.value.trim().length === 0) {
+                alert("Please enter a task.");
+            } else {
+                const taskDiv = document.createElement("div");
+                taskDiv.className = "task-item";
+                taskDiv.innerHTML = `
+                    <span>${input.value}</span>
+                    <div>
+                        <button class="complete-btn">Complete</button>
+                        <button class="delete">DEL</button>
+                    </div>
+                `;
+                taskList.appendChild(taskDiv);
+                input.value = "";
+
+                // Add event listener for the delete button
+                taskDiv.querySelector(".delete").addEventListener("click", function() {
+                    this.parentNode.parentNode.remove();
+                });
+
+                // Add event listener for the complete button
+                taskDiv.querySelector(".complete-btn").addEventListener("click", function() {
+                    this.parentNode.previousElementSibling.classList.toggle("completed");
+                });
+            }
+        });
+    </script>
+</body>
+</html>

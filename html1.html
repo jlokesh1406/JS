@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css1.css" />
+  </head>
+  <body>
+    <!--content is taken by bro code youtube-->
+
+    <!--line 9 -->
+    <h1 id="myid1"></h1>
+    <p id="myp1"></p>
+
+    <!--65-->
+    <h1 id="inputh1">Hiii</h1>
+    <input type="text1" id="input1" />
+    <button id="mysubmit1">❤️SUBMIT❤️</button>
+    <hr />
+
+    <!--166-->
+    <h1>Enter the radius of circle:</h1>
+    <label>Radius:</label>
+    <input type="text" id="input2" /> <br /><br />
+    <button id="mysubmit2">❤️SUBMIT❤️</button>
+    <h1 id="reslut1"></h1>
+    <hr />
+
+    <!--conter program-->
+    <div id="divdisplay1">
+      <h1 id="display1">0</h1>
+      <button id="btn1">Increment</button>
+      <button id="btn2">Reset</button>
+      <button id="btn3">Decrement</button>
+    </div>
+
+    <hr />
+
+    <!--random number generater -->
+    <div id="random1">
+      <button id="randombtn">Guess</button>
+      <h1 id="randomcontent">0</h1>
+    </div>
+    <hr />
+
+    <!--voter-->
+    <div id="divage">
+      <input type="text" id="inputage" />
+      <button id="btnage">Check</button>
+      <h1 id="displayage">Wait a few min</h1>
+    </div>
+    <hr />
+
+    <!--payment using checkbox and ratio button-->
+    <div>
+      <input type="checkbox" id="checkbox1" />
+      <label for="checkbox1">checkbox</label>
+
+      <!--name of the card choose only one time on rotio operation-->
+      <input type="radio" name="card" id="ratio1" />
+      <label for="radio1">ECE</label>
+
+      <input type="radio" name="card" id="ratio2" />
+      <label for="radio2">EEE</label>
+
+      <input type="radio" name="card" id="ratio3" />
+      <label for="radio3">MECH</label>
+
+      <button id="ration_btn">❤️SUBMIT❤️</button>
+
+      <h1 id="ratio_r1"></h1>
+      <h1 id="ratio_r2"></h1>
+    </div>
+    <br /><br /><br /><br /><br />
+    <hr />
+
+    <form id="TC_FORM">
+      <h1>T to C</h1>
+      <input type="number" id="TC_input" value="0" />
+      <br />
+      <input type="radio" name="unit" id="TC_radio1" />
+      <label for="TC_radio1">C to F</label>
+      <br />
+      <input type="radio" name="unit" id="TC_radio2" />
+      <label for="TC_radio2">F to C</label>
+      <br />
+      <button type="button" onclick="convert()">SUBMIT</button>
+      <h1 id="TC_result"></h1>
+    </form>
+
+    <hr />
+    <!--dice game-->
+    <div id="container">
+      <h1>Dice Roller</h1>
+      <label>chossen dice</label>
+      <input id="diceinput" type="number" value="1" min="1" />
+      <button id="diecbtn" onclick="rolldice()">Rolldice</button>
+      <div id="diceResult"></div>
+      <div id="diceImgages"></div>
+    </div>
+    <br><br><br><br><br>
+    <hr />
+    <br><br><br><br><br>
+    <!--timer on off-->
+    <div>
+      <h1>timer on off:</h1>
+      <button onclick="starttimeout()">startTimeOut</button> <br>
+      <button onclick="stop_clear_TimeOut()">stop_clear_TimeOut</button>
+    </div>
+    <br><br><br><br><br>
+    <hr />
+    <br><br><br><br><br>
+
+    <!--std timer-->
+    <div id="clock-container">
+      <div id="clock">00:00:00</div>
+    </div>
+
+    <br><br><br><br><br>
+    <hr />
+    <br><br><br><br><br>
+    
+    <h1 style="text-align: center;">---------stopwatch---------</h1>
+    <div id="containerstopwatch">
+      <div id="display">
+        00:00:00:01
+      </div>
+      <div id="controls">
+        <button id="startBtn" onclick="start()">start</button>
+        <button id="stopBtn" onclick="stop()">stop</button>
+        <button id="resetBtn" onclick="reset()">reset</button>
+      </div>
+    </div>
+
+    
+    <br><br><br><br><br>
+    <hr />
+    <br><br><br><br><br>
+    <script type="module" src="./js1.js"></script>
+  </body>
+</html>

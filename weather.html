@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .card
+        {   width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f65215;
+            position: fixed;
+        }
+        .weathetform
+        {
+            text-align: center;
+        }
+        input
+        {
+            padding:10px;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            margin: 10px;
+            background-color: black;
+            color: white;
+            font-weight: bolder;
+        }
+        button
+        {
+            padding:10px;
+            border: none;
+            border-radius: 10px;
+            background-color: rgb(25, 228, 25);
+            font-size: 15px;
+            color: white;
+        }
+        p,h1
+        {
+            text-align: center;
+            font-size: 1.5rem;
+            color: #000000;
+            font-weight: bolder;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+    </style>
+</head>
+<body>
+    <form class="weathetform">
+        <input type="text" class="cityinput" placeholder="Enter city">
+        <button type="submit">Get Weather</button>
+    </form>
+    <div class="card" style="display: none;">
+        <!-- <h1 class="cityDisplay">Miami</h1>
+        <p class="tempDisplay">90F</p>
+        <p class="humidityDisplay">humidity : 75%</p>
+        <p class="descDisplay">Clear Skies</p>
+        <p class="weatherEmoji">😎</p>
+        <p class="errorDisplay">Please Enter A City</p> -->
+    </div>
+</body>
+</html>

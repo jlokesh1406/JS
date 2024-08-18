@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- 3.selecting elements using DOM -->
+    <!-- 1.getElementsById() -->
+    <h1> 1.getElementsById()</h1>
+    <div>
+        <p class="getId1"></p>
+    </div>
+
+    <!-- 2.getElementsByName() -->
+    <h1> 2.getElementsByName()</h1>
+    <div>
+        <input type="text" name="temp1" id="gebn" value="lokesh">
+        <input type="text" name="temp1" id="gebn" value="lokesh">
+    </div>
+
+    <!--3.getElementsByTagName()-->
+    <h1>3.getElementsByTagName()</h1>
+    <div>
+        <h1>one</h1>
+        <h1>two</h1>
+        <h1>three</h1>
+        <h1>four</h1>
+    </div>
+
+    <!--4.getElementsByClassName() -->
+    <h1>4.getElementsByClassName()</h1>
+    <div>
+        <h2 class="msg">first</h2>
+        <h2 class="msg">second</h2>
+        <h2 class="msg">third</h2>
+    </div>
+    <div>
+        <h2 class="msg1">first</h2>
+        <div id="inner">
+            <h2 class="msg1">second</h2>
+            <h2 class="msg1">third</h2>
+        </div>
+    </div>
+    <!-- 5.querySelector() -->
+    <h1>5.querySelector()</h1>
+    <div>
+        <h1 class="QS">LOKESH1</h1>
+        <h1 class="QS">LOKESH2</h1>
+        <h1 class="QS">LOKESH3</h1>
+    </div>
+
+    <!--6.querySelectorAll() -->
+    <h1>6.querySelectorAll()</h1>
+    <div>
+        <h1 class="QSA">LOKESH1</h1>
+        <h1 class="QSA">LOKESH2</h1>
+        <h1 class="QSA">LOKESH3</h1>
+    </div>
+
+    <hr>
+    <h1>4.Tranversing elements</h1>
+    <!-- 1.selecting parent element -->
+    <div class="spe_container">
+        <p class="spe">lokeh</p>
+    </div>
+
+    <!-- 2.selecting child element -->
+
+    <div class="sce_container1">  
+        <p>lokeh 1</p>
+        <p>lokeh 2</p>
+        <p>lokeh 3</p>
+        <p>lokeh 4</p>
+    </div>
+
+    <div class="sce_container2"><p>lokeh 1</p><p>lokeh 2</p><p>lokeh 3</p><p>lokeh 4</p></div>
+
+    <div>  
+        <p>lokeh 1</p>
+        <p class="second">lokeh 2</p>
+        <p>lokeh 3</p>
+        <p>lokeh 4</p>
+    </div>
+
+    <hr>
+    <h1>3.Manipulating HTML elements</h1>
+    <!-- 1.append -->
+
+     <!--2.appendchild -->
+     <ul id="menu1">
+        <li>home</li>
+        <li>about</li>
+        <li>blog</li>
+     </ul>
+
+     <h4><u>3.before & after method</u></h4>
+     <ul id="menu2">
+        <li>home</li>
+        <li>about</li>
+        <li>blog</li>
+     </ul>
+     
+
+     <h4><u>4.adjacentHtml</u></h4>
+     <ul id="menu4">
+        <li>home</li>
+        <li>about</li>
+        <li>blog</li>
+     </ul>
+
+     <input type="text" id="username" placeholder="username">
+
+     <!-- 7.Manipulating Element's styles -->
+     <!-- 1.style property -->
+     <div style="background-color: red; font-size: 20px;" id="SP1">
+        LOKESH
+     </div>
+     <!-- 2.cssText() -->
+     <div style="background-color: red; font-size: 20px;" id="cssText">
+        LOKESH
+     </div>
+     <!--3.className property -->
+     <div>
+        <h1 id="CNP" class="main clasName1">GREAT</h1>
+     </div>
+
+     <!----.Javascript Events---->
+    <div id="JE_container">
+        <button type="button" onclick="console.log('---hii---');">Click</button>  <!-- ---hii--- -->
+        <button type="button" onclick="error_msg()">Click</button>  <!-- --Button2 Click-- -->
+        <button type="button" onclick="console.log(event);">Click</button>  <!-- PointerEvent {isTrusted: true, pointerId: 1, width: 1, height: 1, pressure: 0, …} -->
+        <button type="button" onclick="console.log(event.type);">Click</button>  <!-- click -->
+        <button type="button" onclick="console.log(event.target);">Click</button>  <!-- <button type="button" onclick="console.log(event.target);">Click</button> -->
+
+        <button type="button" onclick="console.log(this);">Click</button>  <!-- <button type="button" onclick="console.log(this);">Click</button> -->
+        <button id="loki" type="button" onclick="console.log(this.id);">Click</button>  <!-- loki -->
+        <button id="loki" type="button" onclick="console.log(id);">Click</button>  <!-- loki -->   
+        <button id="loki" type="button" onclick="console.log(type);">Click</button>  <!-- button -->
+
+        <button id="loki1">Click</button>  <!-- --hello--  loki1 -->
+    </div>     
+
+    <hr>
+    <!-- addEventListener -->
+
+    <div>
+        <button id="AE_1">--Click1--</button>   <!-- addeventlistner1--- -->
+        <button id="AE_2">--Click2--</button>   <!-- ---c--- -->
+        <button id="AE_3">--Click3--</button>   <!-- ---c1--- -->
+
+        <button id="AE_4">--Click4--</button>  
+    </div>
+      
+
+
+    <script src="./DOM.js">
+    </script>
+</body>
+</html>

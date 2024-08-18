@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TL</title>
+
+    <!-- 
+        //internal
+        <script>
+            let str='lokesh';
+            if(str==='Lokesh') alert("YES");
+            else alert("NO");
+       </script> 
+    -->
+  </head>
+  <body onload="alert('NEC')">
+    <!--
+        ctrl+shift+j==open google console
+
+            1.alert("hello world!") 
+                open popup window on a broswer
+            2.
+                let str="LOKESH"
+                if(str==='LOKESH') alert("YES")
+            3.
+                4=='4'  // true   different data type
+                4==='4' // flase   same data type
+            4.
+                BOMAS RULE
+                   B – Brackets
+                   O – Order of powers or roots 
+                   D – Division
+                   M – Multiplication 
+                   A – Addition
+                   S – Subtraction
+            
+        intro:
+            what is javascript?
+            => javascript is a high level,object-oriented programming language
+               programming language - instruction computer to do things
+               high level-we don't have to worry about complex stuff like memory management
+               object-oriented-based on object,storing most kind of data
+
+            what role of js in web developmeent?
+            => 
+               .html-content
+               .css-presentation
+               .js-building interactive web application
+        
+            Static content: Content remains the same for all users, regardless of their behavior or real-time events.
+            Dynamic content: Content generated or altered in real-time based on user behavior, location, or other factors.
+
+        Linking:
+            1.inline
+            2.internal
+            3.external
+
+        data type:
+            let me={name:'lokesh'};  // object
+            let firstname='lokesh';  // primitive data type
+
+     -->
+    <h1>TED TALKS</h1>
+    <!--DOM's -->
+    <h1 class="h1">HELLO</h1>
+    <!-- 
+        head (#document)
+        |----- >head (#document.firstElementChild)
+        |         |---- > meta  (#document.firstElementChild.firstElementChild)
+        |         |---- > title (#document.firstElementChild.secondElementChild)
+        |         |---- > link  (#document.firstElementChild.lastElementChild)
+        |
+        |------ > body (#document.firstElementChild.lastElementChild)
+                  |---- > h1 (#document.firstElementChild.lastElementChild.firstElementChild)
+                  |---- > input (#document.firstElementChild.lastElementChild.secondElementChild)
+                  |---- > button (#document.firstElementChild.lastElementChild.thirdElementChild)
+                  |---- >   ul   (#document.firstElementChild.lastElementChild.lastElementChild)
+                            |--- > li (#document.firstElementChild.lastElementChild.lastElementChild.firstElementChild)
+                            |---- > li
+                            |---- > li
+                            |---- > li(#document.firstElementChild.lastElementChild.lastElementChild.lastElementChild)
+                                    |--- > a  (#document.firstElementChild.lastElementChild.lastElementChild.lastElementChild.firstElementChild)
+
+
+
+
+    -->
+    <h1 class="dom1">LOKESH</h1>
+    <h1 class="dom2">LOKESH</h1>
+    <input class="dom3" type="checkbox" name="" id="" /><label> what</label>
+
+    <script src="./external.js"></script>
+  </body>
+</html>
